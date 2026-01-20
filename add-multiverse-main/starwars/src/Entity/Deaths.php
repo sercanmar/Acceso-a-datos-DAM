@@ -56,7 +56,7 @@ class Deaths
      */
     private $idFilm;
 
-    public function getIdFilm(): Films
+    public function getIdFilm(): ?Films
     {
         return $this->idFilm;
     }

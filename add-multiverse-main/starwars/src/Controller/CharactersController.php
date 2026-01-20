@@ -63,18 +63,24 @@ class CharactersController extends AbstractController
         return new Response($data, Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
-    public function getCharacter_death(int $episode, SerializerInterface $serializer): Response
+    public function getCharacter_death(int $episode)
     {
-        $death = $this->getDoctrine()
-            ->getRepository(Deaths::class)
-            ->find(['idFilm' => $episode]);
-        $character=$death->getIdCharacter();
+       $deaths = $this->getDoctrine()->getRepository(Deaths::class)->findAll();
+       $deaths_filtradas=[];
 
-        $data = $serializer->serialize(
-            $character,
-            'json',
-            ['groups' => 'characters']
-        );
+       foreach ($deaths as $death) {
+           $deaths_episode=$death->getIdFilm()->getEpisode();
+           if ($deaths_episode==$episode) {
+               $deaths_filtradas[]=[
+                   'death' => $death->getIdCharacter()->getName(),
+                   'killer' => $death->getIdKiller()->getName(),
+                   'episode' => $death->getIdFilm()->getEpisode(),
+
+               ];
+
+           }
+           $data=json_encode($deaths_filtradas);
+       }
 
         return new Response($data, Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }

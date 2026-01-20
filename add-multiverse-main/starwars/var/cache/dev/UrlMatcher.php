@@ -30,6 +30,7 @@ return [
             [['_route' => 'planets', '_controller' => 'App\\Controller\\PlanetsController::all'], null, null, null, false, false, null],
         ],
         '/affiliations' => [[['_route' => 'affiliations', '_controller' => 'App\\Controller\\AffiliationsController::all'], null, null, null, false, false, null]],
+        '/films/deaths' => [[['_route' => 'films_deaths', '_controller' => 'App\\Controller\\FilmsController::filmsDeaths'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -58,7 +59,10 @@ return [
                 .')'
                 .'|/deaths/([^/]++)(*:289)'
                 .'|/films/([^/]++)(*:312)'
-                .'|/planets/([^/]++)(*:337)'
+                .'|/planets/([^/]++)(?'
+                    .'|(*:340)'
+                    .'|/([^/]++)(*:357)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -75,8 +79,9 @@ return [
         264 => [[['_route' => 'characters_jedi', '_controller' => 'App\\Controller\\CharactersController::getCharacter_Order'], ['order'], null, null, false, true, null]],
         289 => [[['_route' => 'deaths_id', '_controller' => 'App\\Controller\\DeathsController::getDeath'], ['id'], null, null, false, true, null]],
         312 => [[['_route' => 'films_id', '_controller' => 'App\\Controller\\FilmsController::getFilm'], ['id'], null, null, false, true, null]],
-        337 => [
-            [['_route' => 'planets_id', '_controller' => 'App\\Controller\\PlanetsController::getPlanet'], ['id'], null, null, false, true, null],
+        340 => [[['_route' => 'planets_id', '_controller' => 'App\\Controller\\PlanetsController::getPlanet'], ['id'], null, null, false, true, null]],
+        357 => [
+            [['_route' => 'planets_diameter', '_controller' => 'App\\Controller\\PlanetsController::planetsDiameter'], ['diameterA', 'diameterB'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

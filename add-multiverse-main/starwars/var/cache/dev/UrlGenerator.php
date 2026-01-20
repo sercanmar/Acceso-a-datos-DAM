@@ -28,7 +28,9 @@ return [
     'deaths' => [[], ['_controller' => 'App\\Controller\\DeathsController::all'], [], [['text', '/deaths']], [], []],
     'deaths_id' => [['id'], ['_controller' => 'App\\Controller\\DeathsController::getDeath'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/deaths']], [], []],
     'films' => [[], ['_controller' => 'App\\Controller\\FilmsController::all'], [], [['text', '/films']], [], []],
+    'films_deaths' => [[], ['_controller' => 'App\\Controller\\FilmsController::filmsDeaths'], [], [['text', '/films/deaths']], [], []],
     'films_id' => [['id'], ['_controller' => 'App\\Controller\\FilmsController::getFilm'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/films']], [], []],
     'planets' => [[], ['_controller' => 'App\\Controller\\PlanetsController::all'], [], [['text', '/planets']], [], []],
     'planets_id' => [['id'], ['_controller' => 'App\\Controller\\PlanetsController::getPlanet'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/planets']], [], []],
+    'planets_diameter' => [['diameterA', 'diameterB'], ['_controller' => 'App\\Controller\\PlanetsController::planetsDiameter'], [], [['variable', '/', '[^/]++', 'diameterB'], ['variable', '/', '[^/]++', 'diameterA'], ['text', '/planets']], [], []],
 ];

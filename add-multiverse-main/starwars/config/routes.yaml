@@ -39,12 +39,24 @@ deaths_id:
   path: /deaths/{id}
   controller:  App\Controller\DeathsController::getDeath
 
+
+
+
 films:
   path: /films
   controller:  App\Controller\FilmsController::all
+
+films_deaths:
+  path: /films/deaths
+  controller: App\Controller\FilmsController::filmsDeaths
+
+
 films_id:
   path: /films/{id}
   controller:  App\Controller\FilmsController::getFilm
+
+
+
 
 planets:
   path: /planets
@@ -53,3 +65,7 @@ planets:
 planets_id:
   path: /planets/{id}
   controller:  App\Controller\PlanetsController::getPlanet
+
+planets_diameter:
+  path: /planets/{diameterA}/{diameterB}
+  controller: App\Controller\PlanetsController::planetsDiameter

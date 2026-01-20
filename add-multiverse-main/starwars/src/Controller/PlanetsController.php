@@ -42,4 +42,24 @@ class PlanetsController extends AbstractController
         );
         return new Response($data,Response::HTTP_OK,['Content-Type' => 'application/json']);
     }
+
+    public function planetsDiameter(int $diameterA,int $diameterB){
+        $planets = $this->getDoctrine()->getRepository(Planets::class)->findAll();
+        $planets_diameter=[];
+
+            foreach($planets as $planet){
+                $diameter =$planet->getDiameter();
+                if($diameter >= $diameterA && $diameter<=$diameterB){
+                    $planets_diameter[]=[
+                        'id' => $planet->getId(),
+                        'name' => $planet->getName(),
+                        'diameter' => $diameter
+                    ];
+                }
+
+            }
+        $data=json_encode($planets_diameter);
+        return new Response($data, Response::HTTP_OK, ['Content-Type' => 'application/json']);
+
+}
 }

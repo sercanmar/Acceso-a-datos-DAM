@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Entity\Deaths;
 use App\Entity\Films;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -43,4 +44,24 @@ class FilmsController extends AbstractController
 
         return new Response($data, Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
-}
+
+    public function filmsDeaths(){
+
+
+        $deaths = $this->getDoctrine()->getRepository(Deaths::class)->findAll();
+        $films=[];
+        foreach($deaths as $death){
+
+            $films[!empty($death->getIdFilm()) ? $death->getIdFilm()->getTitle(): "No film found"][] = [
+            'killer' => $death->getIdKiller()->getName(),
+                'death' => $death->getIdCharacter()->getName(),
+            ];
+           // dump($death->getIdFilm()->getTitle())? $death->getIdFilm()->getTitle():"No file";
+            //dump($death->getIdKiller()->getName());
+          //  dump($death->getIdCharacter()->getName());
+        }
+        $data = json_encode($films);
+        return new Response($data, Response::HTTP_OK, ['Content-Type' => 'application/json']);
+    }
+
+    }
