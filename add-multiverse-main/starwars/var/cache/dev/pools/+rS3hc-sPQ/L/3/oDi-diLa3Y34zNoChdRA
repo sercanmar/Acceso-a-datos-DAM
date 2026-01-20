@@ -1,0 +1,3 @@
+<?php //App%255CEntity%255CPlanets%2523getOrbitalPeriod
+
+return [PHP_INT_MAX, []];

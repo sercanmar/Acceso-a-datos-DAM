@@ -1,0 +1,73 @@
+app_centres:
+  path: /centres
+  controller: App\Controller\CentreController::centres
+app_centres_valencia:
+  path: /centresValencia
+  controller: App\Controller\CentreController::centresValencia
+app_centre:
+  path: /centre/{id}
+  controller: App\Controller\CentreController::centre
+app_centres_new:
+  path: /newCentre
+  controller: App\Controller\CentreController::newCentre
+app_centres_cicle:
+  path: /centre-cicle/{centreId}/{cicleId}
+  controller: App\Controller\CentreController::addCicleCentre
+app_centres_update:
+  path: /updateCentre/{id}
+  controller: App\Controller\CentreController::updateCentre
+app_centres_delete:
+  path: /deleteCentre/{id}
+  controller: App\Controller\CentreController::deleteCentre
+app_centre_provincia:
+  path: /centre-provincia
+  controller: App\Controller\CentreController::centresProvincia
+
+app_cicles:
+  path: /cicles
+  controller: App\Controller\CicleController::cicles
+app_cicle:
+  path: /cicle/{id}
+  controller: App\Controller\CicleController::cicle
+app_cicle_new:
+  path: /newCicle
+  controller: App\Controller\CicleController::newCicle
+app_cicle_update:
+  path: /updateCicle/{id}
+  controller: App\Controller\CicleController::updateCicle
+app_cicle_delete:
+  path: /deleteCicle/{id}
+  controller: App\Controller\CicleController::deleteCicle
+
+app_provincias:
+  path: /provincias
+  controller: App\Controller\ProvinciaController::provincias
+app_provincia:
+  path: /provincia/{id}
+  controller: App\Controller\ProvinciaController::provincia
+app_provincia_new:
+  path: /newProvincia
+  controller: App\Controller\ProvinciaController::newProvincia
+app_provincia_update:
+  path: /updateProvincia/{id}
+  controller: App\Controller\ProvinciaController::updateProvincia
+app_provincia_delete:
+  path: /deleteProvincia/{id}
+  controller: App\Controller\ProvinciaController::deleteProvincia
+
+
+app_regims:
+  path: /regims
+  controller: App\Controller\RegimController::regims
+app_regim:
+  path: /regim/{id}
+  controller: App\Controller\RegimController::regim
+app_regim_new:
+  path: /newRegim
+  controller: App\Controller\RegimController::newRegim
+app_regim_update:
+  path: /updateRegim/{id}
+  controller: App\Controller\RegimController::updateRegim
+app_regim_delete:
+  path: /deleteRegim/{id}
+  controller: App\Controller\RegimController::deleteRegim

@@ -1,0 +1,55 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+affiliations:
+    path: /affiliations
+    controller:  App\Controller\AffiliationsController::all
+affiliations_id:
+  path: /affiliation/{id}
+  controller: App\Controller\AffiliationsController::getAffiliation
+
+
+
+characters:
+  path: /characters
+  controller:  App\Controller\CharactersController::all
+
+characters_id:
+  path: /characters/{id}
+  controller: App\Controller\CharactersController::getCharacter
+
+characters_jedi:
+  path: /character/{order}
+  controller: App\Controller\CharactersController::getCharacter_Order
+
+characters_death:
+  path: /characters/death/{episode}
+  controller: App\Controller\CharactersController::getCharacter_death
+
+
+
+
+
+deaths:
+  path: /deaths
+  controller:  App\Controller\DeathsController::all
+
+deaths_id:
+  path: /deaths/{id}
+  controller:  App\Controller\DeathsController::getDeath
+
+films:
+  path: /films
+  controller:  App\Controller\FilmsController::all
+films_id:
+  path: /films/{id}
+  controller:  App\Controller\FilmsController::getFilm
+
+planets:
+  path: /planets
+  controller:  App\Controller\PlanetsController::all
+
+planets_id:
+  path: /planets/{id}
+  controller:  App\Controller\PlanetsController::getPlanet

@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planets>
+  <row>
+    <id>1</id>
+    <name>Unknow planet</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>NULL</created_date>
+    <updated_date>NULL</updated_date>
+    <url>NULL</url>
+  </row>
+  <row>
+    <id>2</id>
+    <name>Tatooine</name>
+    <rotation_period>23</rotation_period>
+    <orbital_period>304</orbital_period>
+    <diameter>10465</diameter>
+    <climate>arid</climate>
+    <gravity>1 standard</gravity>
+    <terrain>desert</terrain>
+    <surface_water>1</surface_water>
+    <population>200000</population>
+    <created_date>2014-12-09 13:50:50</created_date>
+    <updated_date>2014-12-21 20:48:04</updated_date>
+    <url>https://swapi.co/api/planets/1/</url>
+  </row>
+  <row>
+    <id>3</id>
+    <name>Alderaan</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>364</orbital_period>
+    <diameter>12500</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>grasslands; mountains</terrain>
+    <surface_water>40</surface_water>
+    <population>2000000000</population>
+    <created_date>2014-12-10 11:35:48</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/2/</url>
+  </row>
+  <row>
+    <id>4</id>
+    <name>Yavin IV</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>4818</orbital_period>
+    <diameter>10200</diameter>
+    <climate>temperate; tropical</climate>
+    <gravity>1 standard</gravity>
+    <terrain>jungle; rainforests</terrain>
+    <surface_water>8</surface_water>
+    <population>1000</population>
+    <created_date>2014-12-10 11:37:19</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/3/</url>
+  </row>
+  <row>
+    <id>5</id>
+    <name>Hoth</name>
+    <rotation_period>23</rotation_period>
+    <orbital_period>549</orbital_period>
+    <diameter>7200</diameter>
+    <climate>frozen</climate>
+    <gravity>1.1 standard</gravity>
+    <terrain>tundra; ice caves; mountain ranges</terrain>
+    <surface_water>100</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-10 11:39:14</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/4/</url>
+  </row>
+  <row>
+    <id>6</id>
+    <name>Dagobah</name>
+    <rotation_period>23</rotation_period>
+    <orbital_period>341</orbital_period>
+    <diameter>8900</diameter>
+    <climate>murky</climate>
+    <gravity>N/A</gravity>
+    <terrain>swamp; jungles</terrain>
+    <surface_water>8</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-10 11:42:23</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/5/</url>
+  </row>
+  <row>
+    <id>7</id>
+    <name>Bespin</name>
+    <rotation_period>12</rotation_period>
+    <orbital_period>5110</orbital_period>
+    <diameter>118000</diameter>
+    <climate>temperate</climate>
+    <gravity>1.5 (surfa); 1 standard (Cloud City)</gravity>
+    <terrain>gas giant</terrain>
+    <surface_water>0</surface_water>
+    <population>6000000</population>
+    <created_date>2014-12-10 11:43:55</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/6/</url>
+  </row>
+  <row>
+    <id>8</id>
+    <name>Endor</name>
+    <rotation_period>18</rotation_period>
+    <orbital_period>402</orbital_period>
+    <diameter>4900</diameter>
+    <climate>temperate</climate>
+    <gravity>0.85 standard</gravity>
+    <terrain>forests; mountains; lakes</terrain>
+    <surface_water>8</surface_water>
+    <population>30000000</population>
+    <created_date>2014-12-10 11:50:29</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/7/</url>
+  </row>
+  <row>
+    <id>9</id>
+    <name>Naboo</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>312</orbital_period>
+    <diameter>12120</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>grassy hills; swamps; forests; mountains</terrain>
+    <surface_water>12</surface_water>
+    <population>4500000000</population>
+    <created_date>2014-12-10 11:52:31</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/8/</url>
+  </row>
+  <row>
+    <id>10</id>
+    <name>Coruscant</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>368</orbital_period>
+    <diameter>12240</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>cityscape; mountains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>1000000000000</population>
+    <created_date>2014-12-10 11:54:14</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/9/</url>
+  </row>
+  <row>
+    <id>11</id>
+    <name>Kamino</name>
+    <rotation_period>27</rotation_period>
+    <orbital_period>463</orbital_period>
+    <diameter>19720</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>ocean</terrain>
+    <surface_water>100</surface_water>
+    <population>1000000000</population>
+    <created_date>2014-12-10 12:45:07</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/10/</url>
+  </row>
+  <row>
+    <id>12</id>
+    <name>Geonosis</name>
+    <rotation_period>30</rotation_period>
+    <orbital_period>256</orbital_period>
+    <diameter>11370</diameter>
+    <climate>temperate; arid</climate>
+    <gravity>0.9 standard</gravity>
+    <terrain>rock; desert; mountain; barren</terrain>
+    <surface_water>5</surface_water>
+    <population>100000000000</population>
+    <created_date>2014-12-10 12:47:22</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/11/</url>
+  </row>
+  <row>
+    <id>13</id>
+    <name>Utapau</name>
+    <rotation_period>27</rotation_period>
+    <orbital_period>351</orbital_period>
+    <diameter>12900</diameter>
+    <climate>temperate; arid; windy</climate>
+    <gravity>1 standard</gravity>
+    <terrain>scrublands; savanna; canyons; sinkholes</terrain>
+    <surface_water>0.9</surface_water>
+    <population>95000000</population>
+    <created_date>2014-12-10 12:49:01</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/12/</url>
+  </row>
+  <row>
+    <id>14</id>
+    <name>Mustafar</name>
+    <rotation_period>36</rotation_period>
+    <orbital_period>412</orbital_period>
+    <diameter>4200</diameter>
+    <climate>hot</climate>
+    <gravity>1 standard</gravity>
+    <terrain>volcanoes; lava rivers; mountains; caves</terrain>
+    <surface_water>0</surface_water>
+    <population>20000</population>
+    <created_date>2014-12-10 12:50:17</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/13/</url>
+  </row>
+  <row>
+    <id>15</id>
+    <name>Kashyyyk</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>381</orbital_period>
+    <diameter>12765</diameter>
+    <climate>tropical</climate>
+    <gravity>1 standard</gravity>
+    <terrain>jungle; forests; lakes; rivers</terrain>
+    <surface_water>60</surface_water>
+    <population>45000000</population>
+    <created_date>2014-12-10 13:32:00</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/14/</url>
+  </row>
+  <row>
+    <id>16</id>
+    <name>Polis Massa</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>590</orbital_period>
+    <diameter>0</diameter>
+    <climate>artificial temperate</climate>
+    <gravity>0.56 standard</gravity>
+    <terrain>airless asteroid</terrain>
+    <surface_water>0</surface_water>
+    <population>1000000</population>
+    <created_date>2014-12-10 13:33:46</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/15/</url>
+  </row>
+  <row>
+    <id>17</id>
+    <name>Mygeeto</name>
+    <rotation_period>12</rotation_period>
+    <orbital_period>167</orbital_period>
+    <diameter>10088</diameter>
+    <climate>frigid</climate>
+    <gravity>1 standard</gravity>
+    <terrain>glaciers; mountains; ice canyons</terrain>
+    <surface_water>NULL</surface_water>
+    <population>19000000</population>
+    <created_date>2014-12-10 13:43:39</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/16/</url>
+  </row>
+  <row>
+    <id>18</id>
+    <name>Felucia</name>
+    <rotation_period>34</rotation_period>
+    <orbital_period>231</orbital_period>
+    <diameter>9100</diameter>
+    <climate>hot; humid</climate>
+    <gravity>0.75 standard</gravity>
+    <terrain>fungus forests</terrain>
+    <surface_water>NULL</surface_water>
+    <population>8500000</population>
+    <created_date>2014-12-10 13:44:50</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/17/</url>
+  </row>
+  <row>
+    <id>19</id>
+    <name>Cato Neimoidia</name>
+    <rotation_period>25</rotation_period>
+    <orbital_period>278</orbital_period>
+    <diameter>0</diameter>
+    <climate>temperate; moist</climate>
+    <gravity>1 standard</gravity>
+    <terrain>mountains; fields; forests; rock arches</terrain>
+    <surface_water>NULL</surface_water>
+    <population>10000000</population>
+    <created_date>2014-12-10 13:46:29</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/18/</url>
+  </row>
+  <row>
+    <id>20</id>
+    <name>Saleucami</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>392</orbital_period>
+    <diameter>14920</diameter>
+    <climate>hot</climate>
+    <gravity>NULL</gravity>
+    <terrain>caves; desert; mountains; volcanoes</terrain>
+    <surface_water>NULL</surface_water>
+    <population>1400000000</population>
+    <created_date>2014-12-10 13:47:47</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/19/</url>
+  </row>
+  <row>
+    <id>21</id>
+    <name>Stewjon</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>0</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>grass</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-10 16:16:27</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/20/</url>
+  </row>
+  <row>
+    <id>22</id>
+    <name>Eriadu</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>360</orbital_period>
+    <diameter>13490</diameter>
+    <climate>polluted</climate>
+    <gravity>1 standard</gravity>
+    <terrain>cityscape</terrain>
+    <surface_water>NULL</surface_water>
+    <population>22000000000</population>
+    <created_date>2014-12-10 16:26:54</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/21/</url>
+  </row>
+  <row>
+    <id>23</id>
+    <name>Corellia</name>
+    <rotation_period>25</rotation_period>
+    <orbital_period>329</orbital_period>
+    <diameter>11000</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>plains; urban; hills; forests</terrain>
+    <surface_water>70</surface_water>
+    <population>3000000000</population>
+    <created_date>2014-12-10 16:49:12</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/22/</url>
+  </row>
+  <row>
+    <id>24</id>
+    <name>Rodia</name>
+    <rotation_period>29</rotation_period>
+    <orbital_period>305</orbital_period>
+    <diameter>7549</diameter>
+    <climate>hot</climate>
+    <gravity>1 standard</gravity>
+    <terrain>jungles; oceans; urban; swamps</terrain>
+    <surface_water>60</surface_water>
+    <population>1300000000</population>
+    <created_date>2014-12-10 17:03:28</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/23/</url>
+  </row>
+  <row>
+    <id>25</id>
+    <name>Nal Hutta</name>
+    <rotation_period>87</rotation_period>
+    <orbital_period>413</orbital_period>
+    <diameter>12150</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>urban; oceans; swamps; bogs</terrain>
+    <surface_water>NULL</surface_water>
+    <population>7000000000</population>
+    <created_date>2014-12-10 17:11:29</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/24/</url>
+  </row>
+  <row>
+    <id>26</id>
+    <name>Dantooine</name>
+    <rotation_period>25</rotation_period>
+    <orbital_period>378</orbital_period>
+    <diameter>9830</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>oceans; savannas; mountains; grasslands</terrain>
+    <surface_water>NULL</surface_water>
+    <population>1000</population>
+    <created_date>2014-12-10 17:23:30</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/25/</url>
+  </row>
+  <row>
+    <id>27</id>
+    <name>Bestine IV</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>680</orbital_period>
+    <diameter>6400</diameter>
+    <climate>temperate</climate>
+    <gravity>NULL</gravity>
+    <terrain>rocky islands; oceans</terrain>
+    <surface_water>98</surface_water>
+    <population>62000000</population>
+    <created_date>2014-12-12 11:16:55</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/26/</url>
+  </row>
+  <row>
+    <id>28</id>
+    <name>Ord Mantell</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>334</orbital_period>
+    <diameter>14050</diameter>
+    <climate>temperate</climate>
+    <gravity>1 standard</gravity>
+    <terrain>plains; seas; mesas</terrain>
+    <surface_water>10</surface_water>
+    <population>4000000000</population>
+    <created_date>2014-12-15 12:23:42</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/27/</url>
+  </row>
+  <row>
+    <id>29</id>
+    <name>Unknown</name>
+    <rotation_period>0</rotation_period>
+    <orbital_period>0</orbital_period>
+    <diameter>0</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-15 12:26:00</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/28/</url>
+  </row>
+  <row>
+    <id>30</id>
+    <name>Trandosha</name>
+    <rotation_period>25</rotation_period>
+    <orbital_period>371</orbital_period>
+    <diameter>0</diameter>
+    <climate>arid</climate>
+    <gravity>0.62 standard</gravity>
+    <terrain>mountains; seas; grasslands; deserts</terrain>
+    <surface_water>NULL</surface_water>
+    <population>42000000</population>
+    <created_date>2014-12-15 12:53:48</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/29/</url>
+  </row>
+  <row>
+    <id>31</id>
+    <name>Socorro</name>
+    <rotation_period>20</rotation_period>
+    <orbital_period>326</orbital_period>
+    <diameter>0</diameter>
+    <climate>arid</climate>
+    <gravity>1 standard</gravity>
+    <terrain>deserts; mountains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>300000000</population>
+    <created_date>2014-12-15 12:56:31</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/30/</url>
+  </row>
+  <row>
+    <id>32</id>
+    <name>Mon Cala</name>
+    <rotation_period>21</rotation_period>
+    <orbital_period>398</orbital_period>
+    <diameter>11030</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>oceans; reefs; islands</terrain>
+    <surface_water>100</surface_water>
+    <population>27000000000</population>
+    <created_date>2014-12-18 11:07:02</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/31/</url>
+  </row>
+  <row>
+    <id>33</id>
+    <name>Chandrila</name>
+    <rotation_period>20</rotation_period>
+    <orbital_period>368</orbital_period>
+    <diameter>13500</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>plains; forests</terrain>
+    <surface_water>40</surface_water>
+    <population>1200000000</population>
+    <created_date>2014-12-18 11:11:52</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/32/</url>
+  </row>
+  <row>
+    <id>34</id>
+    <name>Sullust</name>
+    <rotation_period>20</rotation_period>
+    <orbital_period>263</orbital_period>
+    <diameter>12780</diameter>
+    <climate>superheated</climate>
+    <gravity>1</gravity>
+    <terrain>mountains; volcanoes; rocky deserts</terrain>
+    <surface_water>5</surface_water>
+    <population>18500000000</population>
+    <created_date>2014-12-18 11:25:40</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/33/</url>
+  </row>
+  <row>
+    <id>35</id>
+    <name>Toydaria</name>
+    <rotation_period>21</rotation_period>
+    <orbital_period>184</orbital_period>
+    <diameter>7900</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>swamps; lakes</terrain>
+    <surface_water>NULL</surface_water>
+    <population>11000000</population>
+    <created_date>2014-12-19 17:47:54</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/34/</url>
+  </row>
+  <row>
+    <id>36</id>
+    <name>Malastare</name>
+    <rotation_period>26</rotation_period>
+    <orbital_period>201</orbital_period>
+    <diameter>18880</diameter>
+    <climate>arid; temperate; tropical</climate>
+    <gravity>1.56</gravity>
+    <terrain>swamps; deserts; jungles; mountains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>2000000000</population>
+    <created_date>2014-12-19 17:52:13</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/35/</url>
+  </row>
+  <row>
+    <id>37</id>
+    <name>Dathomir</name>
+    <rotation_period>24</rotation_period>
+    <orbital_period>491</orbital_period>
+    <diameter>10480</diameter>
+    <climate>temperate</climate>
+    <gravity>0.9</gravity>
+    <terrain>forests; deserts; savannas</terrain>
+    <surface_water>NULL</surface_water>
+    <population>5200</population>
+    <created_date>2014-12-19 18:00:40</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/36/</url>
+  </row>
+  <row>
+    <id>38</id>
+    <name>Ryloth</name>
+    <rotation_period>30</rotation_period>
+    <orbital_period>305</orbital_period>
+    <diameter>10600</diameter>
+    <climate>temperate; arid; subartic</climate>
+    <gravity>1</gravity>
+    <terrain>mountains; valleys; deserts; tundra</terrain>
+    <surface_water>5</surface_water>
+    <population>1500000000</population>
+    <created_date>2014-12-20 09:46:26</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/37/</url>
+  </row>
+  <row>
+    <id>39</id>
+    <name>Aleen Minor</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 09:52:23</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/38/</url>
+  </row>
+  <row>
+    <id>40</id>
+    <name>Vulpter</name>
+    <rotation_period>22</rotation_period>
+    <orbital_period>391</orbital_period>
+    <diameter>14900</diameter>
+    <climate>temperate; artic</climate>
+    <gravity>1</gravity>
+    <terrain>urban; barren</terrain>
+    <surface_water>NULL</surface_water>
+    <population>421000000</population>
+    <created_date>2014-12-20 09:56:59</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/39/</url>
+  </row>
+  <row>
+    <id>41</id>
+    <name>Troiken</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>desert; tundra; rainforests; mountains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:01:37</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/40/</url>
+  </row>
+  <row>
+    <id>42</id>
+    <name>Tund</name>
+    <rotation_period>48</rotation_period>
+    <orbital_period>1770</orbital_period>
+    <diameter>12190</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>barren; ash</terrain>
+    <surface_water>NULL</surface_water>
+    <population>0</population>
+    <created_date>2014-12-20 10:07:30</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/41/</url>
+  </row>
+  <row>
+    <id>43</id>
+    <name>Haruun Kal</name>
+    <rotation_period>25</rotation_period>
+    <orbital_period>383</orbital_period>
+    <diameter>10120</diameter>
+    <climate>temperate</climate>
+    <gravity>0.98</gravity>
+    <terrain>toxic cloudsea; plateaus; volcanoes</terrain>
+    <surface_water>NULL</surface_water>
+    <population>705300</population>
+    <created_date>2014-12-20 10:12:29</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/42/</url>
+  </row>
+  <row>
+    <id>44</id>
+    <name>Cerea</name>
+    <rotation_period>27</rotation_period>
+    <orbital_period>386</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>verdant</terrain>
+    <surface_water>20</surface_water>
+    <population>450000000</population>
+    <created_date>2014-12-20 10:14:48</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/43/</url>
+  </row>
+  <row>
+    <id>45</id>
+    <name>Glee Anselm</name>
+    <rotation_period>33</rotation_period>
+    <orbital_period>206</orbital_period>
+    <diameter>15600</diameter>
+    <climate>tropical; temperate</climate>
+    <gravity>1</gravity>
+    <terrain>lakes; islands; swamps; seas</terrain>
+    <surface_water>80</surface_water>
+    <population>500000000</population>
+    <created_date>2014-12-20 10:18:26</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/44/</url>
+  </row>
+  <row>
+    <id>46</id>
+    <name>Iridonia</name>
+    <rotation_period>29</rotation_period>
+    <orbital_period>413</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>rocky canyons; acid pools</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:26:06</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/45/</url>
+  </row>
+  <row>
+    <id>47</id>
+    <name>Tholoth</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:28:31</created_date>
+    <updated_date>2014-12-20 20:58:18</updated_date>
+    <url>https://swapi.co/api/planets/46/</url>
+  </row>
+  <row>
+    <id>48</id>
+    <name>Iktotch</name>
+    <rotation_period>22</rotation_period>
+    <orbital_period>481</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>arid; rocky; windy</climate>
+    <gravity>1</gravity>
+    <terrain>rocky</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:31:32</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/47/</url>
+  </row>
+  <row>
+    <id>49</id>
+    <name>Quermia</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:34:08</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/48/</url>
+  </row>
+  <row>
+    <id>50</id>
+    <name>Dorin</name>
+    <rotation_period>22</rotation_period>
+    <orbital_period>409</orbital_period>
+    <diameter>13400</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 10:48:36</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/49/</url>
+  </row>
+  <row>
+    <id>51</id>
+    <name>Champala</name>
+    <rotation_period>27</rotation_period>
+    <orbital_period>318</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>oceans; rainforests; plateaus</terrain>
+    <surface_water>NULL</surface_water>
+    <population>3500000000</population>
+    <created_date>2014-12-20 10:52:52</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/50/</url>
+  </row>
+  <row>
+    <id>52</id>
+    <name>Mirial</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>deserts</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 16:44:46</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/51/</url>
+  </row>
+  <row>
+    <id>53</id>
+    <name>Serenno</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>rainforests; rivers; mountains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 16:52:13</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/52/</url>
+  </row>
+  <row>
+    <id>54</id>
+    <name>Concord Dawn</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>jungles; forests; deserts</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 16:54:40</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/53/</url>
+  </row>
+  <row>
+    <id>55</id>
+    <name>Zolan</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 16:56:37</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/54/</url>
+  </row>
+  <row>
+    <id>56</id>
+    <name>Ojom</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>frigid</climate>
+    <gravity>NULL</gravity>
+    <terrain>oceans; glaciers</terrain>
+    <surface_water>100</surface_water>
+    <population>500000000</population>
+    <created_date>2014-12-20 17:27:41</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/55/</url>
+  </row>
+  <row>
+    <id>57</id>
+    <name>Skako</name>
+    <rotation_period>27</rotation_period>
+    <orbital_period>384</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>urban; vines</terrain>
+    <surface_water>NULL</surface_water>
+    <population>500000000000</population>
+    <created_date>2014-12-20 17:50:48</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/56/</url>
+  </row>
+  <row>
+    <id>58</id>
+    <name>Muunilinst</name>
+    <rotation_period>28</rotation_period>
+    <orbital_period>412</orbital_period>
+    <diameter>13800</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>plains; forests; hills; mountains</terrain>
+    <surface_water>25</surface_water>
+    <population>5000000000</population>
+    <created_date>2014-12-20 17:57:47</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/57/</url>
+  </row>
+  <row>
+    <id>59</id>
+    <name>Shili</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>temperate</climate>
+    <gravity>1</gravity>
+    <terrain>cities; savannahs; seas; plains</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 18:43:14</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/58/</url>
+  </row>
+  <row>
+    <id>60</id>
+    <name>Kalee</name>
+    <rotation_period>23</rotation_period>
+    <orbital_period>378</orbital_period>
+    <diameter>13850</diameter>
+    <climate>arid; temperate; tropical</climate>
+    <gravity>1</gravity>
+    <terrain>rainforests; cliffs; canyons; seas</terrain>
+    <surface_water>NULL</surface_water>
+    <population>4000000000</population>
+    <created_date>2014-12-20 19:43:51</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/59/</url>
+  </row>
+  <row>
+    <id>61</id>
+    <name>Umbara</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>NULL</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2014-12-20 20:18:36</created_date>
+    <updated_date>2014-12-20 20:58:19</updated_date>
+    <url>https://swapi.co/api/planets/60/</url>
+  </row>
+  <row>
+    <id>62</id>
+    <name>Jakku</name>
+    <rotation_period>NULL</rotation_period>
+    <orbital_period>NULL</orbital_period>
+    <diameter>NULL</diameter>
+    <climate>NULL</climate>
+    <gravity>NULL</gravity>
+    <terrain>deserts</terrain>
+    <surface_water>NULL</surface_water>
+    <population>NULL</population>
+    <created_date>2015-04-17 06:55:58</created_date>
+    <updated_date>2015-04-17 06:55:58</updated_date>
+    <url>https://swapi.co/api/planets/61/</url>
+  </row>
+</planets>

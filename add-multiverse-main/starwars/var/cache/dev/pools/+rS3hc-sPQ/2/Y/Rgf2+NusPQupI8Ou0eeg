@@ -1,0 +1,3 @@
+<?php //App%255CController%255CCharactersController%2523getCharacter
+
+return [PHP_INT_MAX, []];
