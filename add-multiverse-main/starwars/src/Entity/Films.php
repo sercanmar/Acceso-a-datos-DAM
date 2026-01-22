@@ -42,6 +42,7 @@ class Films
 
     public function __construct()
     {
+        $this->characters = new ArrayCollection();
 
     }
 

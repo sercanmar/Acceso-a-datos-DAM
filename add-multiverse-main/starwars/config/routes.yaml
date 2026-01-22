@@ -15,6 +15,10 @@ characters:
   path: /characters
   controller:  App\Controller\CharactersController::all
 
+characters_new:
+  path: /characters/new
+  controller: App\Controller\CharactersController::newCharacters
+
 characters_id:
   path: /characters/{id}
   controller: App\Controller\CharactersController::getCharacter
@@ -26,7 +30,6 @@ characters_jedi:
 characters_death:
   path: /characters/death/{episode}
   controller: App\Controller\CharactersController::getCharacter_death
-
 
 
 
@@ -50,10 +53,15 @@ films_deaths:
   path: /films/deaths
   controller: App\Controller\FilmsController::filmsDeaths
 
+films_new:
+  path: /films/new
+  controller: App\Controller\FilmsController::newFilms
 
 films_id:
   path: /films/{id}
   controller:  App\Controller\FilmsController::getFilm
+
+
 
 
 

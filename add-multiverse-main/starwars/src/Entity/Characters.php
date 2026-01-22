@@ -117,6 +117,8 @@ class Characters
 
     public function __construct()
     {
+        $this->films = new ArrayCollection();
+        $this->affiliations = new ArrayCollection();
 
     }
 

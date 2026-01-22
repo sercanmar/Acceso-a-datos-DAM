@@ -30,7 +30,9 @@ return [
             [['_route' => 'planets', '_controller' => 'App\\Controller\\PlanetsController::all'], null, null, null, false, false, null],
         ],
         '/affiliations' => [[['_route' => 'affiliations', '_controller' => 'App\\Controller\\AffiliationsController::all'], null, null, null, false, false, null]],
+        '/characters/new' => [[['_route' => 'characters_new', '_controller' => 'App\\Controller\\CharactersController::newCharacters'], null, null, null, false, false, null]],
         '/films/deaths' => [[['_route' => 'films_deaths', '_controller' => 'App\\Controller\\FilmsController::filmsDeaths'], null, null, null, false, false, null]],
+        '/films/new' => [[['_route' => 'films_new', '_controller' => 'App\\Controller\\FilmsController::newFilms'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
