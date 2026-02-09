@@ -1,0 +1,33 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+usuarios:
+  path: /usuarios
+  controller: App\Controller\UsuarioController::usuarios
+  methods: [GET, POST]
+
+usuario:
+  path: /usuarios/{id}
+  controller: App\Controller\UsuarioController::usuario
+  methods: [GET, PUT, DELETE]
+
+Plan_usuario:
+  path: /usuarios/{id}/plan
+  controller: App\Controller\UsuarioController::plan_usuario
+
+Activar_premium:
+  path: /usuarios/{id}/premium
+  controller: App\Controller\UsuarioController::activar_premium
+Pago_usuario:
+  path: /usuarios/{id}/pagos
+  controller: App\Controller\UsuarioController::pago_usuario
+
+Suscripcion_usuario:
+  path: /suscripciones/{id}
+  controller: App\Controller\UsuarioController::suscripcion_usuario
+
+usuario_configuracion:
+  path: /usuarios/{id}/configuracion
+  controller: App\Controller\UsuarioController::configuracion_usuario
+  methods: [GET, PUT]

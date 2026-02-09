@@ -71,7 +71,7 @@ class CharactersController extends AbstractController
         $deaths_filtradas=[];
 
         foreach ($deaths as $death) {
-            if ($death->getId() == $episode) {
+            if ($death->getIdFilm() && $death->getIdFilm()->getId() == $episode) {
                 $deaths_filtradas[]=[
                     'death' => $death->getIdCharacter()->getName(),
                     'killer' => $death->getIdKiller()->getName(),
