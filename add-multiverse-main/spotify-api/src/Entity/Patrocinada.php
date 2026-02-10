@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Patrocinada
@@ -16,6 +17,7 @@ class Patrocinada
      * @var bool
      *
      * @ORM\Column(name="patrocinada", type="boolean", nullable=false, options={"default"="1"})
+     * @Groups({"playlist"})
      */
     private $patrocinada = true;
 
@@ -23,6 +25,7 @@ class Patrocinada
      * @var \DateTime
      *
      * @ORM\Column(name="fecha_inicio", type="date", nullable=false)
+     * @Groups({"playlist"})
      */
     private $fechaInicio;
 
@@ -30,6 +33,7 @@ class Patrocinada
      * @var \DateTime|null
      *
      * @ORM\Column(name="fecha_fin", type="date", nullable=true)
+     * @Groups({"playlist"})
      */
     private $fechaFin;
 
@@ -42,6 +46,7 @@ class Patrocinada
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="playlist_id", referencedColumnName="id")
      * })
+     * @Groups({"playlist"})
      */
     private $playlist;
 

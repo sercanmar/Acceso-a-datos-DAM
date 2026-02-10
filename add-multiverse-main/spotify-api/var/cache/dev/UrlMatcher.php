@@ -36,14 +36,18 @@ return [
                     .'|(*:190)'
                     .'|/(?'
                         .'|p(?'
-                            .'|lan(*:209)'
-                            .'|remium(*:223)'
-                            .'|agos(*:235)'
+                            .'|la(?'
+                                .'|n(*:212)'
+                                .'|ylists(*:226)'
+                            .')'
+                            .'|remium(*:241)'
+                            .'|agos(*:253)'
                         .')'
-                        .'|configuracion(*:257)'
+                        .'|configuracion(*:275)'
                     .')'
                 .')'
-                .'|/suscripciones/([^/]++)(*:290)'
+                .'|/suscripciones/([^/]++)(*:308)'
+                .'|/playlists/([^/]++)(*:335)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -55,12 +59,14 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         190 => [[['_route' => 'usuario', '_controller' => 'App\\Controller\\UsuarioController::usuario'], ['id'], ['GET' => 0, 'PUT' => 1, 'DELETE' => 2], null, false, true, null]],
-        209 => [[['_route' => 'Plan_usuario', '_controller' => 'App\\Controller\\UsuarioController::plan_usuario'], ['id'], null, null, false, false, null]],
-        223 => [[['_route' => 'Activar_premium', '_controller' => 'App\\Controller\\UsuarioController::activar_premium'], ['id'], null, null, false, false, null]],
-        235 => [[['_route' => 'Pago_usuario', '_controller' => 'App\\Controller\\UsuarioController::pago_usuario'], ['id'], null, null, false, false, null]],
-        257 => [[['_route' => 'usuario_configuracion', '_controller' => 'App\\Controller\\UsuarioController::configuracion_usuario'], ['id'], ['GET' => 0, 'PUT' => 1], null, false, false, null]],
-        290 => [
-            [['_route' => 'Suscripcion_usuario', '_controller' => 'App\\Controller\\UsuarioController::suscripcion_usuario'], ['id'], null, null, false, true, null],
+        212 => [[['_route' => 'Plan_usuario', '_controller' => 'App\\Controller\\UsuarioController::plan_usuario'], ['id'], null, null, false, false, null]],
+        226 => [[['_route' => 'usuario_playlist', '_controller' => 'App\\Controller\\UsuarioController::playlist_usuario'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        241 => [[['_route' => 'Activar_premium', '_controller' => 'App\\Controller\\UsuarioController::activar_premium'], ['id'], null, null, false, false, null]],
+        253 => [[['_route' => 'Pago_usuario', '_controller' => 'App\\Controller\\UsuarioController::pago_usuario'], ['id'], null, null, false, false, null]],
+        275 => [[['_route' => 'usuario_configuracion', '_controller' => 'App\\Controller\\UsuarioController::configuracion_usuario'], ['id'], ['GET' => 0, 'PUT' => 1], null, false, false, null]],
+        308 => [[['_route' => 'Suscripcion_usuario', '_controller' => 'App\\Controller\\UsuarioController::suscripcion_usuario'], ['id'], null, null, false, true, null]],
+        335 => [
+            [['_route' => 'detalles_playlist', '_controller' => 'App\\Controller\\UsuarioController::detalles_playlist'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

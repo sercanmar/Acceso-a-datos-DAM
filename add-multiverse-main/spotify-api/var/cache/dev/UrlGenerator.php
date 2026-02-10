@@ -22,4 +22,6 @@ return [
     'Pago_usuario' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::pago_usuario'], [], [['text', '/pagos'], ['variable', '/', '[^/]++', 'id'], ['text', '/usuarios']], [], []],
     'Suscripcion_usuario' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::suscripcion_usuario'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/suscripciones']], [], []],
     'usuario_configuracion' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::configuracion_usuario'], [], [['text', '/configuracion'], ['variable', '/', '[^/]++', 'id'], ['text', '/usuarios']], [], []],
+    'usuario_playlist' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::playlist_usuario'], [], [['text', '/playlists'], ['variable', '/', '[^/]++', 'id'], ['text', '/usuarios']], [], []],
+    'detalles_playlist' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::detalles_playlist'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/playlists']], [], []],
 ];

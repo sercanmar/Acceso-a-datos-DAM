@@ -21,7 +21,7 @@ class Usuario
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      *
-     * @Groups({"usuario"})
+     * @Groups({"usuario","playlist"})
      */
     private $id;
 
@@ -30,7 +30,7 @@ class Usuario
      *
      * @ORM\Column(name="username", type="string", length=45, nullable=false)
      *
-     * @Groups({"usuario", "usuario:write", "usuario:read","free","premium"})
+     * @Groups({"usuario", "usuario:write", "usuario:read","free","premium","playlist"})
      */
     private $username;
 
