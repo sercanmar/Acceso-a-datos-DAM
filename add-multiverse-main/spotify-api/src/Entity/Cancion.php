@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Cancion
@@ -18,6 +19,7 @@ class Cancion
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @Groups({"cancion","playlist"})
      */
     private $id;
 
@@ -25,6 +27,7 @@ class Cancion
      * @var string
      *
      * @ORM\Column(name="titulo", type="string", length=255, nullable=false)
+     * @Groups({"cancion","playlist"})
      */
     private $titulo;
 
@@ -32,6 +35,7 @@ class Cancion
      * @var int
      *
      * @ORM\Column(name="duracion", type="integer", nullable=false)
+     * @Groups({"cancion"})
      */
     private $duracion;
 
@@ -39,6 +43,7 @@ class Cancion
      * @var string|null
      *
      * @ORM\Column(name="ruta", type="string", length=255, nullable=true)
+     * @Groups({"cancion"})
      */
     private $ruta;
 
@@ -46,6 +51,7 @@ class Cancion
      * @var int
      *
      * @ORM\Column(name="numero_reproducciones", type="integer", nullable=false)
+     * @Groups({"cancion"})
      */
     private $numeroReproducciones;
 
@@ -56,6 +62,7 @@ class Cancion
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="album_id", referencedColumnName="id")
      * })
+     * @Groups({"cancion"})
      */
     private $album;
 
@@ -63,6 +70,7 @@ class Cancion
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="Usuario", mappedBy="cancion")
+     * @Groups({"cancion"})
      */
     private $usuario = array();
 
@@ -78,6 +86,7 @@ class Cancion
      *     @ORM\JoinColumn(name="premium_usuario_id", referencedColumnName="usuario_id")
      *   }
      * )
+     * @Groups({"cancion"})
      */
     private $premiumUsuario = array();
 

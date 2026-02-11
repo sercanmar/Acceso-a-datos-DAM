@@ -4,7 +4,9 @@ namespace App\Controller;
 
 
 use App\Entity\Activa;
+use App\Entity\AnyadeCancionPlaylist;
 use App\Entity\Calidad;
+use App\Entity\Cancion;
 use App\Entity\Configuracion;
 use App\Entity\Eliminada;
 use App\Entity\Favoritas;
@@ -190,7 +192,6 @@ class UsuarioController extends AbstractController
     }
 
 
-
     public function activar_premium(Request $request, SerializerInterface $serializer)
     {
         $entityManager = $this->getDoctrine()->getManager();
@@ -238,7 +239,6 @@ class UsuarioController extends AbstractController
 
         return new Response("Usuario actualizado a Premium correctamente y suscripcion creada", 200);
     }
-
 
 
     public function pago_usuario(Request $request, SerializerInterface $serializer): Response
@@ -324,9 +324,9 @@ class UsuarioController extends AbstractController
 
         }
         if ($request->isMethod('PUT')) {
-           // $calidad = $configuracion->getCalidad();
+            // $calidad = $configuracion->getCalidad();
             //$tipoDescarga = $configuracion->getTipoDescarga();
-          //  $idioma = $configuracion->getIdioma();
+            //  $idioma = $configuracion->getIdioma();
 
             $data = $request->getContent();
             $serializer->deserialize($data, Configuracion::class, 'json', [
@@ -337,7 +337,7 @@ class UsuarioController extends AbstractController
             $this->getDoctrine()->getManager()->flush();
             $data = $serializer->serialize($configuracion, 'json', ['groups' => 'configuracion']);
             return new Response($data, 200, ['Content-Type' => 'application/json']);
-                //falta insertar en subtablas
+            //falta insertar en subtablas
         }
 
 
@@ -389,11 +389,12 @@ class UsuarioController extends AbstractController
             return new Response($data, 201, ['Content-Type' => 'application/json']);
 
 
-
         }
 
 
-}
+    }
+
+
     public function detalles_playlist(Request $request, SerializerInterface $serializer)
     {
         $id = $request->get('id');
@@ -404,19 +405,18 @@ class UsuarioController extends AbstractController
             return new Response("Playlist no encontrada", 404);
         }
 
-        $activa=$this->getDoctrine()
+        $activa = $this->getDoctrine()
             ->getRepository(Activa::class)
             ->findOneBy(['playlist' => $playlist]);
-        $eliminada=$this->getDoctrine()
+        $eliminada = $this->getDoctrine()
             ->getRepository(Eliminada::class)
             ->findOneBy(['playlist' => $playlist]);
-        $patrocinada=$this->getDoctrine()
+        $patrocinada = $this->getDoctrine()
             ->getRepository(Patrocinada::class)
             ->findOneBy(['playlist' => $playlist]);
-        $favoritas=$this->getDoctrine()
+        $favoritas = $this->getDoctrine()
             ->getRepository(Favoritas::class)
             ->findOneBy(['playlist' => $playlist]);
-
 
 
         if ($activa && $activa->isEsCompartida()) {
@@ -447,57 +447,165 @@ class UsuarioController extends AbstractController
 
     public function canciones_playlist(Request $request, SerializerInterface $serializer)
     {
-        $id = $request->get('id');
-        $usuario = $this->getDoctrine()->
-        getRepository(Usuario::class)
-            ->findBy(['id' => $id]);
 
-        $playlists = $this->getDoctrine()
+        $id = $request->get('id');
+        $playlist = $this->getDoctrine()
             ->getRepository(Playlist::class)
-            ->findBy(['usuario' => $usuario]);
+            ->findOneBy(['id' => $id]);
+
+        if (!$playlist) {
+            return new Response("Playlist no encontrada", 404);
+        }
+        $cancionesplaylist = $this->getDoctrine()
+            ->getRepository(AnyadeCancionPlaylist::class)
+            ->findBy(['playlist' => $playlist]);
 
 
         if ($request->isMethod('GET')) {
-            $data = $serializer->serialize($playlists, 'json', ['groups' => 'playlist']);
+
+            $data = $serializer->serialize($cancionesplaylist, 'json', ['groups' => 'playlist']);
             return new Response($data, 200, ['Content-Type' => 'application/json']);
 
 
         }
         if ($request->isMethod('POST')) {
 
+            $data = json_decode($request->getContent(), true);
+            $cancionid = $data['cancionId'];
+            $usuarioid = $data['usuarioId'];
 
-            $id = $request->get('id');
-            $usuario = $this->getDoctrine()->
-            getRepository(Usuario::class)
-                ->findOneBy(['id' => $id]);
+            $cancion = $this->getDoctrine()
+                ->getRepository(Cancion::class)
+                ->findOneBy(['id' => $cancionid]);
+            $usuario = $this->getDoctrine()
+                ->getRepository(Usuario::class)
+                ->findOneBy(['id' => $usuarioid]);
 
-            $data = $request->getContent();
+            $cancionnueva = new AnyadeCancionPlaylist();
+            $cancionnueva->setUsuario($usuario);
+            $cancionnueva->setCancion($cancion);
+            $cancionnueva->setPlaylist($playlist);
+            $cancionnueva->setFechaAnyadida(new \DateTime('today'));
 
-            $playlistnueva = $serializer->deserialize
-            ($data, Playlist::class, 'json', ['groups' => 'playlist']);
-
-
-            $playlistnueva->setUsuario($usuario);
-            $playlistnueva->setFechaCreacion(new \DateTime('today'));
-
-
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($playlistnueva);
+            $entityManager = $this->getDoctrine()
+                ->getManager();
+            $entityManager->persist($cancionnueva);
 
             $entityManager->flush();
 
-            $data = $serializer->serialize($playlistnueva, 'json', ['groups' => 'playlist']);
+            $data = $serializer->serialize($cancionnueva, 'json', ['groups' => 'playlist']);
             return new Response($data, 201, ['Content-Type' => 'application/json']);
-
 
 
         }
     }
 
-    public function borrar_playlist($cancionid, $id)
+    public function borrar_canciones_playlist(Request $request, SerializerInterface $serializer): Response
     {
+        $id = $request->get('id');
+        $cancionid = $request->get('cancionid');
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $playlist = $this->getDoctrine()->
+        getRepository(Playlist::class)
+            ->findOneBy(['id' => $id]);
+
+        $cancion = $this->getDoctrine()
+            ->getRepository(Cancion::class)
+            ->findOneBy(['id' => $cancionid]);
+        $cancionaborrar = $this->getDoctrine()
+            ->getRepository(AnyadeCancionPlaylist::class)
+            ->findOneBy([
+                'playlist' => $playlist,
+                'cancion' => $cancion
+            ]);
+
+        $entityManager->remove($cancionaborrar);
+
+        $entityManager->flush();
+
+        return new Response("borrado", 200);
+
+
     }
 
 
+    public function playlist_seguidas(Request $request, SerializerInterface $serializer): Response
+    {
 
+        $id = $request->get('id');
+        $usuario = $this->getDoctrine()
+            ->getRepository(Usuario::class)
+            ->findOneBy(['id' => $id]);
+        $playlistsSeguidas = $usuario->getPlaylist();
+        $data = $serializer->serialize($playlistsSeguidas, 'json', ['groups' => 'playlist']);
+        return new Response($data, 200, ['Content-Type' => 'application/json']);
+
+    }
+
+    public function seguir_borrar_playlists(Request $request, SerializerInterface $serializer): Response
+    {
+        $id = $request->get('id');
+        $idplaylist = $request->get('idplaylist');
+
+        $usuario = $this->getDoctrine()->
+        getRepository(Usuario::class)
+            ->findOneBy(['id' => $id]);
+
+        $playlist = $this->getDoctrine()
+            ->getRepository(Playlist::class)
+            ->findBy(['id' => $idplaylist]);
+
+
+        if ($request->isMethod('PUT')) {
+
+            $usuario->getPlaylist()->add($playlist);
+
+
+        }
+
+        if ($request->isMethod('DELETE')) {
+
+        }
+        return $serializer->serialize($usuario, 'json', ['groups' => 'playlist']);
+    }
 }
+
+        /*
+          public function artistas_seguidos(Request $request, SerializerInterface $serializer)
+          {
+              }
+
+
+          }
+
+
+
+
+         public function seguir_borrar_artistas(Request $request, SerializerInterface $serializer): Response
+         {
+         }
+         public function albums_seguidos(Request $request, SerializerInterface $serializer): Response
+         {
+         }
+         public function seguir_borrar_albums(Request $request, SerializerInterface $serializer): Response
+         {
+         }
+         public function podcasts_seguidos($id)
+         {
+         }
+         public function seguir_borrar_podcasts($id, $idpodcast)
+         {
+         }
+
+      */
+
+
+
+
+
+
+
+
+
+

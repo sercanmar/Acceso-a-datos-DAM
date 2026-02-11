@@ -47,4 +47,45 @@ canciones_playlist:
   methods: [ GET, POST]
 borrar_canciones_playlist:
   path: /playlists/{id}/canciones/{cancionid}
-  controller: App\Controller\UsuarioController::borrar_playlist
+  controller: App\Controller\UsuarioController::borrar_canciones_playlist
+
+
+
+
+playlists_seguidas:
+  path: /usuarios/{id}/playlists-seguidas
+  controller: App\Controller\UsuarioController::playlist_seguidas
+
+seguir_borrar_playlists:
+  path: /usuarios/{id}/playlists-seguidas/{idplaylist}
+  controller: App\Controller\UsuarioController::seguir_borrar_playlists
+  methods: [ GET,PUT ]
+
+
+artistas_seguidos:
+  path: /usuarios/{id}/artistas-seguidos
+  controller: App\Controller\UsuarioController::artistas_seguidos
+
+seguir_borrar_artistas:
+  path: /usuarios/{id}/artistas-seguidos/{idartista}
+  controller: App\Controller\UsuarioController::seguir_borrar_artistas
+  methods: [ GET,PUT ]
+
+
+albums_seguidos:
+  path: /usuarios/{id}/albums-seguidos
+  controller: App\Controller\UsuarioController::albums_seguidos
+
+seguir_borrar_albums:
+  path: /usuarios/{id}/albums-seguidos/{idalbums}
+  controller: App\Controller\UsuarioController::seguir_borrar_albums
+  methods: [ GET,PUT ]
+
+podcasts_seguidos:
+  path: /usuarios/{id}/podcasts-seguidos
+  controller: App\Controller\UsuarioController::podcasts_seguidos
+
+seguir_borrar_podcasts:
+  path: /usuarios/{id}/podcasts-seguidos/{idpodcast}
+  controller: App\Controller\UsuarioController::seguir_borrar_podcasts
+  methods: [ GET,PUT ]
